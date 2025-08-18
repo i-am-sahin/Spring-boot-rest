@@ -14,7 +14,7 @@ public class JobRestController {
     @Autowired
     private JobService jobService;
 
-    @GetMapping("jobPosts")
+    @GetMapping(path="jobPosts", produces = {"application/json"})
 //    @ResponseBody -->annotation in Spring Boot tells a controller method to directly write its return value to the HTTP response body,
     public List<JobPost> getAllJobs() {
         return jobService.getAllJobs();
